@@ -3,6 +3,7 @@ package com.way2automation;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class twitLandingPage {
 	WebDriver driver;
@@ -24,9 +25,10 @@ public class twitLandingPage {
 	public WebElement followers;
 
 	
-	public void gotoProfile()
+	public twitMyProfile gotoProfile()
 	{
 		profile.click();
+		return PageFactory.initElements(driver,twitMyProfile.class);
 	}
 	
 	public void gotoTweets()
