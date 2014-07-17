@@ -13,7 +13,7 @@ public class testtwitLoinPage {
 		
 		//pass pagefactory and then object, and then class, so that when we create a new class, it will initialize all the webelement in it
 		twitlogin lp= PageFactory.initElements(driver,twitlogin.class);
-		twitLandingPage landingpage = lp.doLogin("sicong.ma10@gmail.com","Woyaoyuanmeng88~");
+		twitLandingPage landingpage = lp.doLogin("chehang13@gmail.com","qatesting123");
 		landingpage.gotoProfile();
 	}
 }
