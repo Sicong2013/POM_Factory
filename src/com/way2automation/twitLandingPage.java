@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.way2automation.twitter.config.Configufile;
+
 public class twitLandingPage {
 	WebDriver driver;
 	public twitLandingPage(WebDriver driver)
@@ -12,16 +14,16 @@ public class twitLandingPage {
 		this.driver = driver;
 	}
 
-	@FindBy(xpath = ".//*[@id='page-container']/div[1]/div[1]/div/div[1]/div/a")
+	@FindBy(xpath = Configufile.profile)
 	public WebElement profile;
 	
-	@FindBy(xpath = ".//*[@id='page-container']/div[1]/div[1]/div/div[2]/ul/li[1]/a/span[1]")
+	@FindBy(xpath = Configufile.tweets)
 	public WebElement tweets;
 	
-	@FindBy(xpath = ".//*[@id='page-container']/div[1]/div[1]/div/div[2]/ul/li[2]/a/span[1]")
+	@FindBy(xpath = Configufile.following)
 	public WebElement following;
 	
-	@FindBy(xpath = ".//*[@id='page-container']/div[1]/div[1]/div/div[2]/ul/li[3]/a/span[1]")
+	@FindBy(xpath = Configufile.followers)
 	public WebElement followers;
 
 	

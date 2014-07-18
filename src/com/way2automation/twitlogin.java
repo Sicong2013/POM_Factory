@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import com.way2automation.twitter.config.Configufile;
+
 
 //login page has a landing page
 public class twitlogin {
@@ -19,13 +21,13 @@ public class twitlogin {
 	}
 	
 	//find x path of this element
-	@FindBy(xpath = ".//*[@id='signin-email']")
+	@FindBy(xpath = Configufile.username)
 	public WebElement username;
 	//has to be depend on a webelement
-	@FindBy(how = How.XPATH, using = ".//*[@id='signin-password']")
+	@FindBy(how = How.XPATH, using = Configufile.password)
 	public WebElement password;
 	
-	@FindBy(xpath = ".//*[@id='front-container']/div[2]/div[2]/form/table/tbody/tr/td[2]/button")
+	@FindBy(xpath =Configufile.signin)
 	public WebElement signin;
 	
 	//create a method, Business Login

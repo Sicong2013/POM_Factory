@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.way2automation.twitter.config.Configufile;
+
 public class twitEditProfile {
 
 	//constructor 
@@ -14,13 +16,13 @@ public class twitEditProfile {
 	{
 		this.driver = driver;
 	}
-	@FindBy(xpath = ".//*[@id='page-container']/div[3]/div/div[1]/div[1]/button")
+	@FindBy(xpath = Configufile.inlineEditIcon)
 	public WebElement inlineEditIcon;
 	
-	@FindBy(xpath = ".//*[@id='header-choose-existing']/div/div/label/input")
+	@FindBy(xpath = Configufile.uploadPhoto)
 	public WebElement uploadPhoto;
 	
-	@FindBy(xpath = ".//*[@id='header_image_upload_dialog-dialog']/div[2]/div[2]/div/div/div/div[3]/button[1]")
+	@FindBy(xpath = Configufile.cancelPhoto)
     public WebElement cancelPhoto;
 	
 	
